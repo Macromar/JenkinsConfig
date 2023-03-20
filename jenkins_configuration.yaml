@@ -1,0 +1,22 @@
+jenkins:
+  systemMessage: "System message"
+  numExecutors: 1
+  scmCheckoutRetryCount: 3
+  mode: NORMAL
+
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: jenkins-admin
+          password: ${ja_password}
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              username: ${git_username}
+              password: ${git_password}
+              scope: SYSTEM
+              description: Credentials for git

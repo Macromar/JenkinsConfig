@@ -34,7 +34,7 @@ credentials:
             scope:    GLOBAL
             id:       github-user
             username: Marevo
-            password: dfdjugfdg 
+            password: "{{gitpass}}" 
             description: github username/password  
 
 tool:
